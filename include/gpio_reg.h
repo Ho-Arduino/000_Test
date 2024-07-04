@@ -32,4 +32,6 @@
 #define DDR_D               ((BASE_D) + (IDX_DDR))
 #define PORT_D              ((BASE_D) + (IDX_PORT))
 
+#define DDR(addr)           ((addr) + IDX)
+
 #endif
