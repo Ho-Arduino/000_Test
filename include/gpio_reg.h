@@ -2,8 +2,9 @@
 #define __GPIO_REG_H__
 
 #include <inttypes.h>
+#include "register.h"
 
-#define BASE_GPIO           ((volatile uint8_t *) 0x23UL)
+#define BASE_GPIO           ((reg_t *) 0x23UL)
 
 #define SIZE_GPIO_REG       (0x03UL)
 
