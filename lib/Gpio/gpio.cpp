@@ -32,9 +32,4 @@ bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode)
     return ret_status;
 }
 
-bool SetPinOuput(reg_t *port, uint8_t pin)
-{
-    return SetPinMode(port, pin, OUTPUT);
-}
-
 #endif

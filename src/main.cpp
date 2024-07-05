@@ -4,7 +4,7 @@
 void setup()
 {
     // set portb pin 4, 5 as digital out
-    SetPinMode(BASE_B, 5, OUTPUT);
+    SetPinOuput(BASE_B, 5);
     SET_BIT(PORT(BASE_B), 5);
     // set led on
 
