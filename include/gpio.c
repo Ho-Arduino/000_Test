@@ -23,6 +23,6 @@ bool SetPinMode(reg_t *port, uint8_t pin)
         return ret_status;
     }
 
-    WRITE_BIT(port + )
+    // WRITE_BIT(port + )
 }
 #endif
