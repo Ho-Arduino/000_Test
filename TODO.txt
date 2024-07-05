@@ -1,0 +1,4 @@
+1. READ_BIT
+2. set pin input function
+3. digital write function
+4. digital read function
