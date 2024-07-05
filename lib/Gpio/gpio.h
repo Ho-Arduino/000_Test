@@ -45,6 +45,6 @@ extern bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode);
  * @param pin   The index of a gpio pin
  * @return      Error state
  */
-extern bool SetPinOuput(reg_t *port, uint8_t pin);
+static inline bool SetPinOuput(reg_t *port, uint8_t pin);
 
 #endif
