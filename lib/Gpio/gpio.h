@@ -47,4 +47,6 @@ extern bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode);
  */
 static inline bool SetPinOuput(reg_t *port, uint8_t pin);
 
+bool SetPinState(reg_t *port, uint8_t pin, uint8_t state);
+
 #endif
