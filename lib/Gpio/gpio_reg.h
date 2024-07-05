@@ -1,7 +1,6 @@
 #ifndef __GPIO_REG_H__
 #define __GPIO_REG_H__
 
-#include <inttypes.h>
 #include "register.h"
 
 #define BASE_GPIO           ((reg_t *) 0x23UL)

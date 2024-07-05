@@ -1,16 +1,12 @@
 #include <Arduino.h>
-#include "register.h"
-#include "gpio_reg.h"
+#include "gpio.h"
 
 void setup()
 {
     // set portb pin 4, 5 as digital out
-    WRITE_BIT(DDR(BASE_B), 4, 1);
-    WRITE_BIT(DDR(BASE_B), 5, 1);
-
+    SetPinMode(BASE_B, 5, OUTPUT);
+    SET_BIT(PORT(BASE_B), 5);
     // set led on
-    WRITE_BIT(PORT(BASE_B), 4, 1);
-    WRITE_BIT(PORT(BASE_B), 5, 1);
 
 }
 
