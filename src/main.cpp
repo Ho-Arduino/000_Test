@@ -5,6 +5,7 @@ void setup()
 {
     Serial.begin(9600);
     SetPinInput(BASE_D, 2);
+    pinMode(13, OUTPUT);
 }
 
 void loop()

@@ -67,4 +67,9 @@ static inline bool SetPinLow(reg_t *port, uint8_t pin)
     return SetPinState(port, pin, LOW);
 }
 
+static inline bool GetPinState(reg_t *port, uint8_t pin, uint8_t *dst)
+{
+
+}
+
 #endif
