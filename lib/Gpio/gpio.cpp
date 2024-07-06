@@ -26,8 +26,7 @@ bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode)
         return ret_status;
     }
 
-    WRITE_BIT((DDR(port)), pin, OUTPUT);
-    WRITE_BIT((PORT(port)), pin, LOW);
+    WRITE_BIT((DDR(port)), pin, mode);
 
     return ret_status;
 }

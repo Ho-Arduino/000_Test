@@ -4,14 +4,10 @@
 void setup()
 {
     Serial.begin(9600);
-    Serial.println(READ_BIT(DDR(BASE_B), 5));
-    Serial.println(READ_BIT(PORT(BASE_B), 5));
-    SetPinOuput(BASE_B, 5);
-    SetPinHigh(BASE_B, 5);
-    Serial.println(READ_BIT(DDR(BASE_B), 5));
-    Serial.println(READ_BIT(PORT(BASE_B), 5));
+    SetPinInput(BASE_D, 2);
 }
 
 void loop()
 {
+    Serial.println(READ_BIT(PIN(BASE_D), 2));
 }
