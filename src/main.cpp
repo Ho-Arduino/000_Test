@@ -3,11 +3,13 @@
 
 void setup()
 {
-    // set portb pin 4, 5 as digital out
+    Serial.begin(9600);
+    Serial.println(READ_BIT(DDR(BASE_B), 5));
+    Serial.println(READ_BIT(PORT(BASE_B), 5));
     SetPinOuput(BASE_B, 5);
-    SetPinLow(BASE_B, 5);
-    // set led on
-
+    SetPinHigh(BASE_B, 5);
+    Serial.println(READ_BIT(DDR(BASE_B), 5));
+    Serial.println(READ_BIT(PORT(BASE_B), 5));
 }
 
 void loop()
