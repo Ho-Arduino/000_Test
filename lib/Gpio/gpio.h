@@ -31,9 +31,8 @@
  * @param port  The base address of a gpio port
  * @param pin   The index of a gpio pin
  * @param mode  The mode of gpio (input/output)
- * @return      Error state
  */
-extern bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode);
+extern void SetPinMode(reg_t *port, uint8_t pin, uint8_t mode);
 
 /**
  * @brief Set the Pin as GPIO Output
@@ -43,31 +42,30 @@ extern bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode);
  * 
  * @param port  The base address of a gpio port
  * @param pin   The index of a gpio pin
- * @return      Error state
  */
-static inline bool SetPinOuput(reg_t *port, uint8_t pin)
+static inline void SetPinOutput(reg_t *port, uint8_t pin)
 {
-    return SetPinMode(port, pin, OUTPUT);
+    SetPinMode(port, pin, OUTPUT);
 }
 
-static inline bool SetPinInput(reg_t *port, uint8_t pin)
+static inline void SetPinInput(reg_t *port, uint8_t pin)
 {
-    return SetPinMode(port, pin, INPUT);
+    SetPinMode(port, pin, INPUT);
 }
 
-bool SetPinState(reg_t *port, uint8_t pin, uint8_t state);
+void SetPinState(reg_t *port, uint8_t pin, uint8_t state);
 
-static inline bool SetPinHigh(reg_t *port, uint8_t pin)
+static inline void SetPinHigh(reg_t *port, uint8_t pin)
 {
-    return SetPinState(port, pin, HIGH);
+    SetPinState(port, pin, HIGH);
 }
 
-static inline bool SetPinLow(reg_t *port, uint8_t pin)
+static inline void SetPinLow(reg_t *port, uint8_t pin)
 {
-    return SetPinState(port, pin, LOW);
+    SetPinState(port, pin, LOW);
 }
 
-static inline bool GetPinState(reg_t *port, uint8_t pin, uint8_t *dst)
+static inline uint8_t GetPinState(reg_t *port, uint8_t pin)
 {
 
 }

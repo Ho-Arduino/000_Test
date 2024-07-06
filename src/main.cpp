@@ -3,12 +3,10 @@
 
 void setup()
 {
-    Serial.begin(9600);
-    SetPinInput(BASE_D, 2);
-    pinMode(13, OUTPUT);
+    SetPinOutput(BASE_B, 5);
+    SetPinHigh(BASE_B, 5);
 }
 
 void loop()
 {
-    Serial.println(READ_BIT(PIN(BASE_D), 2));
 }

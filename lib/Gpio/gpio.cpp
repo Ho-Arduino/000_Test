@@ -2,60 +2,45 @@
 #define __GPIO_C__
 
 #include "gpio.h"
-#include "error.h"
 
-bool SetPinMode(reg_t *port, uint8_t pin, uint8_t mode)
+void SetPinMode(reg_t *port, uint8_t pin, uint8_t mode)
 {
-    bool ret_status = NO_ERR;
-
     if ((port != BASE_B) && (port != BASE_C) && (port != BASE_D))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     if ((port == BASE_C) && (pin == 7))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     if ((mode != INPUT) && (mode != OUTPUT))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     WRITE_BIT((DDR(port)), pin, mode);
-
-    return ret_status;
 }
 
-bool SetPinState(reg_t *port, uint8_t pin, uint8_t state)
+void SetPinState(reg_t *port, uint8_t pin, uint8_t state)
 {
-    bool ret_status = NO_ERR;
-
     if ((port != BASE_B) && (port != BASE_C) && (port != BASE_D))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     if ((port == BASE_C) && (pin == 7))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     if ((state != HIGH) && (state != LOW))
     {
-        ret_status = ERR;
-        return ret_status;
+        return;
     }
 
     WRITE_BIT(port, pin, state);
-
-    return ret_status;
 }
 
 #endif
