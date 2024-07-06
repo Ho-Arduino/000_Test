@@ -52,4 +52,14 @@ static inline bool SetPinOuput(reg_t *port, uint8_t pin)
 
 bool SetPinState(reg_t *port, uint8_t pin, uint8_t state);
 
+static inline bool SetPinHigh(reg_t *port, uint8_t pin)
+{
+    return SetPinState(port, pin, HIGH);
+}
+
+static inline bool SetPinLow(reg_t *port, uint8_t pin)
+{
+    return SetPinState(port, pin, LOW);
+}
+
 #endif
