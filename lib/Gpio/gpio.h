@@ -7,6 +7,7 @@
  * 
  * @todo
  *      1. Add feature to set input pull-up pin
+ *      2. Fix TogglePin() -> doesn't work
  */
 
 #ifndef __GPIO_H__
@@ -121,6 +122,11 @@ static inline void SetPinLow(reg_t *port, uint8_t pin)
 static inline uint8_t GetPinState(reg_t *port, uint8_t pin)
 {
     return READ_BIT(port, pin);
+}
+
+static inline void TogglePin(reg_t *port, uint8_t pin)
+{
+    WRITE_BIT(PORT(port), pin, !READ_BIT(PORT(port), pin));
 }
 
 #endif
