@@ -1,4 +1,2 @@
-1. READ_BIT
-2. set pin input function
-3. digital write function
-4. digital read function
+1. Add a feature for configuring a pin as input pull-up.
+2. Add a feature for disabling pull-up (setting PUD bit in MCUCR)

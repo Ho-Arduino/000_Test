@@ -1,17 +1,17 @@
 #include <Arduino.h>
 #include "gpio.h"
 
-volatile uint8_t *port = BASE_B;
-const uint8_t pin = 5;
+reg_t * addr = (reg_t *)0x55;
 
 void setup()
 {
-    SetPinInput(BASE_D, 2);
-    SetPinOutput(BASE_B, 5);
+    Serial.begin(9600);
+    SetPinInput(BASE_B, 5);
+    SET_BIT(PIN(BASE_B), 5);
+    // WRITE_BIT(addr, 4, 1);
 }
 
 void loop()
 {
-    uint8_t input = GetPinState(BASE_D, 2);
-    SetPinState(BASE_B, 5, input);
+    Serial.println(READ_BIT(PIN(BASE_B), 5));
 }

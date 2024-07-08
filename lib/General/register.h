@@ -10,6 +10,4 @@
 
 typedef volatile uint8_t            reg_t;
 
-#define SREG                        ((regt_t *)0x3F)
-
 #endif
