@@ -40,7 +40,7 @@ void SetPinState(reg_t *port, uint8_t pin, uint8_t state)
         return;
     }
 
-    WRITE_BIT(port, pin, state);
+    WRITE_BIT(PORT(port), pin, state);
 }
 
 #endif

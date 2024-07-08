@@ -2,7 +2,6 @@
 #define __GPIO_H__
 
 #include <inttypes.h>
-#include <stdbool.h>
 
 #include "gpio_reg.h"
 
@@ -67,7 +66,7 @@ static inline void SetPinLow(reg_t *port, uint8_t pin)
 
 static inline uint8_t GetPinState(reg_t *port, uint8_t pin)
 {
-
+    return READ_BIT(port, pin);
 }
 
 #endif
