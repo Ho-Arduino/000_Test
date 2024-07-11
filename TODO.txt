@@ -1,3 +1,0 @@
-1. Add a feature for configuring a pin as input pull-up.
-2. Add a feature for disabling pull-up (setting PUD bit in MCUCR)
-4. Add External Interrupt

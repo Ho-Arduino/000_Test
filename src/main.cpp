@@ -1,13 +1,8 @@
-#include <Arduino.h>
-#include "gpio.h"
+#include "registers.h"
 
-void setup()
+int main()
 {
-    SetPinOutput(BASE_B, 5);
-}
-
-void loop()
-{
-    delay(1000);
-    TogglePin(BASE_B, 5);
+    SET_BIT(DDRB, 5);
+    SET_BIT(PORTB, 5);
+    for(;;){}
 }
