@@ -1,13 +1,13 @@
 #include <Arduino.h>
 #include "gpio.h"
-#include "stdio.h"
 
 void setup()
 {
+    SetPinOutput(BASE_B, 5);
 }
-
-uint8_t curr_sw;
 
 void loop()
 {
+    delay(1000);
+    TogglePin(BASE_B, 5);
 }
