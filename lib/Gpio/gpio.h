@@ -10,9 +10,6 @@ class gpio
 private:
     uint8_t m_pin   = -1;
 
-    void set_pin(uint8_t port);
-    void set_mode(uint8_t mode);
-    void set_output(uint8_t state);
 
 public:
     // Constructors
@@ -26,16 +23,15 @@ public:
     ~gpio(void) {}
 
     // Member Functions
-    void set_high(void);
-    void set_low(void);
-
-    void set_in(void);
-    void set_out(void);
+    void set_output(uint8_t state);
+    void set_pin(uint8_t port);
+    void set_mode(uint8_t mode);
 
     uint8_t get_pin(void);
     uint8_t get_mode(void);
     uint8_t get_output(void);
     uint8_t get_input(void);
+    void toggle(void);
 };
 
 #endif

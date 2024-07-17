@@ -10,11 +10,23 @@
 
 typedef volatile uint8_t   reg_t;
 
+#define PINB      ((reg_t *) 0x23u)
+#define DDRB      ((reg_t *) 0x24u)
+#define PORTB     ((reg_t *) 0x25u)
+
+#define PINC      ((reg_t *) 0x26u)
+#define DDRC      ((reg_t *) 0x27u)
+#define PORTC     ((reg_t *) 0x28u)
+
+#define PIND      ((reg_t *) 0x29u)
+#define DDRD      ((reg_t *) 0x2Au)
+#define PORTD     ((reg_t *) 0x2Bu)
+
 #define TIFR0     ((reg_t *) 0x35u)  // Timer/Counter 0 Interrupt Flag Register
 #define TIFR1     ((reg_t *) 0x36u)  // Timer/Counter 1 Interrupt Flag Register
 #define TIFR2     ((reg_t *) 0x37u)  // Timer/Counter 2 Interrupt Flag Register
 
-#define PCIFR     ((reg_t *) 0x3Bu)  // Pin Change Interrupt Falg Register
+#define PCIFR     ((reg_t *) 0x3Bu)  // Pin Change Interrupt Flag Register
 #define EIFR      ((reg_t *) 0x3Cu)  // External Interrupt Flag Register
 #define EIMSK     ((reg_t *) 0x3Du)  // External Interrupt Mask Register
 

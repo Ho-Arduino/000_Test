@@ -73,26 +73,6 @@ uint8_t gpio::get_output(void)
     return READ_BIT(PORT(idx_port), idx_pin);
 }
 
-void gpio::set_high(void)
-{
-    set_output(HIGH);
-}
-
-void gpio::set_low(void)
-{
-    set_output(LOW);
-}
-
-void gpio::set_in(void)
-{
-    set_mode(INPUT);
-}
-
-void gpio::set_out(void)
-{
-    set_mode(OUTPUT);
-}
-
 uint8_t gpio::get_input(void)
 {
     uint8_t idx_port = GET_PORT(this->m_pin);
@@ -100,5 +80,13 @@ uint8_t gpio::get_input(void)
 
     // return (((*(reg_t *) 0x29) & (1 << idx_pin)) != 0);
     return READ_BIT(PIN(idx_port), idx_pin);
+}
+
+void gpio::toggle(void)
+{
+    uint8_t idx_port = GET_PORT(this->m_pin);
+    uint8_t idx_pin  = GET_PIN(this->m_pin); 
+
+    WRITE_BIT(PIN(idx_port), idx_pin, 1u);
 }
 #endif
